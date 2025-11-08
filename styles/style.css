@@ -1,5 +1,368 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: var(--standart-font-family);
+  font-weight: 400;
+  font-size: var(--standart-font-size);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: var(--background-color);
+  background-image: var(--background-image);
+  padding: 0 var(--page-gap);
+  line-height: 23px;
+}
+
+
+.title-decor {
+  font-size: var(--standart-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--title-text-color);
+  background-color: var(--background-text-color);
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.decorated-zone::before {
+  border-left: 1px solid var(--watermelon);
+  border-bottom: 1px solid var(--watermelon);
+  left: 0;
+  bottom: 10px;
+}
+
+.decorated-zone::after {
+  border-right: 1px solid var(--watermelon);
+  border-top: 1px solid var(--watermelon);
+  top: 10px;
+  right: 0;
+}
+
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  align-items: center;
+  min-height: 668px;
+}
+
+.header__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 100%;
+  padding-top: 10px;
+  padding-bottom: 65px;
+}
+
+
+.header__theme-menu-list {
+  display: grid;
+  gap: calc(var(--main-gap) / 2);
+}
+
+
+.header__rec {
+  display: flex;
+  align-items: center;
+  color: var(--watermelon);
+  text-transform: uppercase;
+  gap: calc(var(--main-gap) / 2);
+}
+
+.header__rec::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--button-color);
+  box-shadow: 0px 0px 4px 2px var(--button-color);
+  margin-right: 9px;
+}
+.header__theme-menu-button {
+  border: none;
+  background-color: inherit;
+  text-transform: lowercase;
+  color: var(--button-color);
+  cursor: pointer;
+  padding: 1px 13px;
+  border: 1px solid transparent;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu {
+  justify-self: end;
+}
+
+.title {
+  line-height: 0.83;
+  color: var(--title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  display: grid;
+  justify-self: flex-start;
+  align-self: center;
+  text-shadow: 4px 4px 0 var(--shadow-color);
+  margin-left: var(--s);
+}
+
+
+.header__text {
+  margin-bottom: 10px;
+}
+
+.section {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  line-height: 130%;
+}
+
+/*
+.section-horizont-abc {
+
+}
+*/
+
+.question {
+  font-weight: var(--title-font-weight);
+  font-size: var(--standart-font-size);
+  color: var(--question-color);
+  width: 100%;
+  margin-bottom: var(--main-gap);
+}
+
+.answer {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--main-gap) / 2);
+  margin-bottom: var(--main-gap);
+}
+
+.answer:last-child {
+  margin-bottom: 0;
+}
+
+.answer__title--lightweight {
+  font-weight: 400;
+}
+
+.answer__title--gap {
+  margin-bottom: calc(var(--main-gap) / 2);
+}
+
+.answer__text {
+  color: var(--text-color);
+  margin-bottom: calc(var(--main-gap) / 2);
+}
+
+.answer__text:last-child {
+  margin-bottom: 0
+}
+
+/* .answer__text--lightweight {
+  margin-top: 8px;
+} */
+
+.text__link {
+  text-decoration: none;
+  text-shadow: 2px 1px 0 var(--shadow-color);
+}
+
+.text__link:focus {
+  outline: none;
+}
+
+.text__link:focus-visible {
+  outline: 1px solid currentColor;
+}
+
+.text__link:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.gallery {
+  display: grid;
+  list-style-type: none;
+  gap: calc(var(--main-gap) / 2);
+  padding-bottom: 30px;
+}
+
+.gallery__picture {
+  height: 100%;
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.footer {
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  min-height: 668px;
+}
+
+@media (width >= 768px) {
+
+  .header__wrapper {
+    padding-bottom: 173px;
+  }
+
+  .header {
+    min-height: 1024px;
+  }
+
+
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__rec {
+    padding-top: 10px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 0;
+  }
+
+
+  .header__text {
+    display: grid;
+    justify-self: right;
+    width: 50%;
+    margin-bottom: var(--main-gap);
+  }
+
+  .section {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+
+  .section-horizont {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--main-gap);
+  }
+
+  .section:not(.section-horizont) .question {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: var(--main-gap);
+  }
+
+  .answer:has(.gallery) {
+    gap: var(--main-gap);
+  }
+
+  .gallery {
+    grid-template-areas:
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street"
+      "tape street street";
+      gap: var(--main-gap);
+  }
+
+  .gallery__item--sunset {
+    grid-area: sunset;
+  }
+
+  .gallery__item--ice-cream {
+    grid-area: ice-cream;
+  }
+
+  .gallery__item--tape {
+    grid-area: tape;
+  }
+
+  .gallery__item--books {
+    grid-area: books;
+  }
+
+  .gallery__item--street {
+    grid-area: street;
+  }
+
+  .footer {
+    min-height: 1024px;
+    margin-top: calc(var(--main-gap) / 2);
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+  }
+
+  /*.question__why-hard {
+
+}*/
+}
+
+@media (width >= 1024px) {
+    .header,
+  .footer {
+    min-height: 768px;
+  }
+
+  .header__wrapper {
+    height: unset;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: center;
+    align-self: flex-start;
+    padding-top: 20px;
+  }
+
+  .header__theme-menu {
+    margin: 0 auto;
+    padding-left: 60px;
+  }
+
+  .header__rec {
+    padding-top: 0;
+  }
+
+  .header__theme-menu-button {
+    padding-block: 0;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .section-horizont {
+    grid-template-columns: 1fr 2.07fr;
+  }
+
+  .question__low-concentration {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--main-gap);
+  }
 }

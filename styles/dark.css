@@ -1,12 +1,25 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
 :root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --question-color: var(--watermelon);
+  --text-color: var(--amaranth-pink);
+  --title-text-color: var(--background-color);
+  --background-text-color: var(--watermelon);
+  --shadow-color: var(--watermelon);
+  --title-color: var(--purple);
+  --background-image: url(../images/cover-image-dark.png);
+  --background-color: var(--background-color);
+  --button-color: var(--watermelon);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --question-color: var(--watermelon);
+    --text-color: var(--amaranth-pink);
+    --title-text-color: var(--background-color);
+    --background-text-color: var(--watermelon);
+    --shadow-color: var(--watermelon);
+    --title-color: var(--purple);
+    --background-image: url(../images/cover-image-dark.png);
+    --background-color: var(--background-color);
+    --button-color: var(--watermelon);
+  }
 }

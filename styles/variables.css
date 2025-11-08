@@ -1,4 +1,20 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+
+:root {
+   --standart-font-family: "IBM Plex Mono", "Arial", sans-serif;
+   --title-font-weight: 700;
+   --standart-font-size: 18px;
+   --title-font-style: bold;
+   --background-color: rgb(0, 0, 40);
+   --light-beige: rgb(255, 241, 247);
+   --purple: rgba(219, 0, 255);
+   --light-pink: rgba(255, 194, 230);
+   --pink: rgba(255, 141, 203);
+   --watermelon: rgba(255, 0, 112);
+   --amaranth-pink: rgba(241, 178, 206);
+   --grey: rgba(53, 52, 48);
+   --page-gap: clamp(10px , 2.65vw , 20px);
+   --min-height: 668px;
+   --main-gap: 20px;
+}
+
+/* вынес цвета в отдельные более понятные переменные */
