@@ -1,7 +1,7 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  font-family: var(--standart-font-family);
+  font-family: var(--standart-font-family), "Arial", sans-serif;
   font-weight: 400;
   font-size: var(--standart-font-size);
   background-position: center;
@@ -12,7 +12,6 @@
   padding: 0 var(--page-gap);
   line-height: 23px;
 }
-
 
 .title-decor {
   font-size: var(--standart-font-size);
@@ -27,26 +26,25 @@
 
 .decorated-zone::before,
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 25px;
   height: 25px;
 }
 
 .decorated-zone::before {
-  border-left: 1px solid var(--watermelon);
-  border-bottom: 1px solid var(--watermelon);
+  border-left: 1px solid var(--decorated-zone-color);
+  border-bottom: 1px solid var(--decorated-zone-color);
   left: 0;
   bottom: 10px;
 }
 
 .decorated-zone::after {
-  border-right: 1px solid var(--watermelon);
-  border-top: 1px solid var(--watermelon);
+  border-right: 1px solid var(--decorated-zone-color);
+  border-top: 1px solid var(--decorated-zone-color);
   top: 10px;
   right: 0;
 }
-
 
 .header {
   display: grid;
@@ -67,12 +65,11 @@
   padding-bottom: 65px;
 }
 
-
 .header__theme-menu-list {
   display: grid;
   gap: calc(var(--main-gap) / 2);
+  border: 1px solid transparent;
 }
-
 
 .header__rec {
   display: flex;
@@ -98,7 +95,7 @@
   color: var(--button-color);
   cursor: pointer;
   padding: 1px 13px;
-  border: 1px solid transparent;
+  cursor: pointer;
 }
 
 .header__theme-menu-button_active {
@@ -109,6 +106,10 @@
   border: none;
   outline: none;
   border-bottom: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--button-color);
 }
 
 .header__theme-menu-button:focus {
@@ -129,7 +130,6 @@
   text-shadow: 4px 4px 0 var(--shadow-color);
   margin-left: var(--s);
 }
-
 
 .header__text {
   margin-bottom: 10px;
@@ -182,7 +182,7 @@
 }
 
 .answer__text:last-child {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 /* .answer__text--lightweight {
@@ -229,15 +229,17 @@
 }
 
 @media (width >= 768px) {
-
   .header__wrapper {
     padding-bottom: 173px;
+  }
+
+  .header__title {
+    margin-left: -20px;
   }
 
   .header {
     min-height: 1024px;
   }
-
 
   .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
@@ -251,7 +253,6 @@
     top: 20px;
     right: 0;
   }
-
 
   .header__text {
     display: grid;
@@ -287,7 +288,7 @@
       "tape books ice-cream"
       "tape street street"
       "tape street street";
-      gap: var(--main-gap);
+    gap: var(--main-gap);
   }
 
   .gallery__item--sunset {
@@ -325,7 +326,7 @@
 }
 
 @media (width >= 1024px) {
-    .header,
+  .header,
   .footer {
     min-height: 768px;
   }
@@ -346,6 +347,10 @@
 
   .header__rec {
     padding-top: 0;
+  }
+
+  .header__title {
+    margin-left: -20px;
   }
 
   .header__theme-menu-button {

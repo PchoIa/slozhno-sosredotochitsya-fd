@@ -4,7 +4,7 @@
    --title-font-weight: 700;
    --standart-font-size: 18px;
    --title-font-style: bold;
-   --background-color: rgb(0, 0, 40);
+   --background-color-black: rgb(0, 0, 40);
    --light-beige: rgb(255, 241, 247);
    --purple: rgba(219, 0, 255);
    --light-pink: rgba(255, 194, 230);
@@ -15,6 +15,18 @@
    --page-gap: clamp(10px , 2.65vw , 20px);
    --min-height: 668px;
    --main-gap: 20px;
+
+
+   --question-color: var(--watermelon);
+   --text-color: var(--amaranth-pink);
+   --title-text-color: var(--background-color-black);
+   --background-text-color: var(--watermelon);
+   --shadow-color: var(--watermelon);
+   --title-color: var(--purple);
+   --background-image: url(../images/cover-image-dark.png);
+   --background-color: var(--background-color-black);
+   --button-color: var(--watermelon);
+   --decorated-zone-color: var(--watermelon);
 }
 
 /* вынес цвета в отдельные более понятные переменные */

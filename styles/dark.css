@@ -1,25 +1,27 @@
 :root.theme-dark {
   --question-color: var(--watermelon);
   --text-color: var(--amaranth-pink);
-  --title-text-color: var(--background-color);
+  --title-text-color: var(--background-color-black);
   --background-text-color: var(--watermelon);
   --shadow-color: var(--watermelon);
   --title-color: var(--purple);
   --background-image: url(../images/cover-image-dark.png);
-  --background-color: var(--background-color);
+  --background-color: var(--background-color-black);
   --button-color: var(--watermelon);
+  --decorated-zone-color: var(--watermelon);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --question-color: var(--watermelon);
     --text-color: var(--amaranth-pink);
-    --title-text-color: var(--background-color);
+    --title-text-color: var(--background-color-black);
     --background-text-color: var(--watermelon);
     --shadow-color: var(--watermelon);
     --title-color: var(--purple);
     --background-image: url(../images/cover-image-dark.png);
-    --background-color: var(--background-color);
+    --background-color: var(--background-color-black);
     --button-color: var(--watermelon);
+    --decorated-zone-color: var(--watermelon);
   }
 }
