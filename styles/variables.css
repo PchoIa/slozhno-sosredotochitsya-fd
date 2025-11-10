@@ -10,8 +10,10 @@
    --light-pink: rgba(255, 194, 230);
    --pink: rgba(255, 141, 203);
    --watermelon: rgba(255, 0, 112);
+   --watermelon-lightweight: rgba(255, 0, 112, 0.4);
    --amaranth-pink: rgba(241, 178, 206);
    --grey: rgba(53, 52, 48);
+   --grey-lightweight: rgba(53, 52, 48, 0.4);
    --page-gap: clamp(10px , 2.65vw , 20px);
    --min-height: 668px;
    --main-gap: 20px;
@@ -27,6 +29,8 @@
    --background-color: var(--background-color-black);
    --button-color: var(--watermelon);
    --decorated-zone-color: var(--watermelon);
+   --button-hover-color: var(--watermelon-lightweight);
+
 }
 
 /* вынес цвета в отдельные более понятные переменные */

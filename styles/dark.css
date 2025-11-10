@@ -9,6 +9,7 @@
   --background-color: var(--background-color-black);
   --button-color: var(--watermelon);
   --decorated-zone-color: var(--watermelon);
+  --button-hover-color: var(--watermelon-lightweight);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,5 +24,6 @@
     --background-color: var(--background-color-black);
     --button-color: var(--watermelon);
     --decorated-zone-color: var(--watermelon);
+    --button-hover-color: var(--watermelon-lightweight);
   }
 }

@@ -9,6 +9,7 @@
   --background-color: var(--light-beige);
   --button-color: var(--grey);
   --decorated-zone-color: var(--grey);
+  --button-hover-color: var(--grey-lightweight);
 }
 
 @media (prefers-color-scheme: light) {
@@ -23,6 +24,7 @@
     --background-color: var(--light-beige);
     --button-color: var(--grey);
     --decorated-zone-color: var(--grey);
+    --button-hover-color: var(--grey-lightweight);
   }
 
   .theme-auto .header__rec {
